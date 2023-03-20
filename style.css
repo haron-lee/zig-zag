@@ -40,15 +40,12 @@ div {
 
 body {
   background: var(--background-color);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow-y: scroll;
 }
 
 .wrap {
   max-width: 1080px;
+  margin: 100px auto;
 }
 
 /* header */
@@ -173,8 +170,6 @@ main {
   }
   .wrap {
     width: calc(100% - 40px);
-    max-width: 100%;
-    margin: 80px auto;
   }
 
   header {
@@ -196,16 +191,16 @@ main {
     display: none;
   }
 
-  main article:nth-child(3) {
-    margin-bottom: 80px;
-  }
-
   .products-img p {
     min-width: 200px;
   }
 }
 
 @media (max-width: 560px) {
+  .wrap {
+    margin: 80px auto;
+  }
+
   .title {
     max-width: 207px;
     font-size: 32px;
@@ -242,19 +237,5 @@ main {
 
   .craft {
     order: 0;
-  }
-}
-
-@media (max-height: 900px) {
-  html {
-    overflow: auto;
-  }
-
-  body {
-    display: block;
-  }
-
-  .wrap {
-    margin: 80px auto;
   }
 }
