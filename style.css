@@ -54,7 +54,7 @@ header {
   display: flex;
   color: #fff;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
   box-sizing: border-box;
 }
 
@@ -197,6 +197,10 @@ main {
 }
 
 @media (max-width: 560px) {
+  header {
+    margin-bottom: 80px;
+  }
+
   .wrap {
     margin: 80px auto;
   }
