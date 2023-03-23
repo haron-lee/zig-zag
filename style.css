@@ -24,7 +24,6 @@ ul {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
 }
 
@@ -72,14 +71,7 @@ header {
 .card {
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-/* box shadow ================= */
-.title-calendar,
-.section_cards {
-  box-shadow: 0 0 10px gold;
+  position: relative;
 }
 
 /* style ====================== */
@@ -91,6 +83,16 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+}
+
+.badge {
+  position: absolute;
+  width: 90px;
+  margin: -10px 0 0 -10px;
+}
+
+.card-product-img {
+  width: 100%;
 }
 
 .cards-description .card-title {
@@ -119,8 +121,8 @@ header {
 .card-description::after {
   content: "";
   display: block;
-  margin: 32px 0;
-  width: 320px;
+  margin: 32px -24px 32px 0;
+  max-width: 320px;
   height: 1px;
   background: #ddd;
 }
@@ -155,6 +157,11 @@ header {
 
 .title strong {
   display: inline-block;
+}
+
+.white_shadow {
+  flex-basis: 40%;
+  flex-shrink: 0;
 }
 
 .white_shadow strong {
@@ -278,8 +285,7 @@ header {
   }
 
   .white_shadow {
-    min-width: 400px;
-    font-size: 32px;
+    max-width: 470px;
   }
 
   .subtitle {
@@ -323,6 +329,15 @@ header {
     font-size: 12px;
     border-radius: 20px;
     overflow: hidden;
+  }
+
+  .card {
+    overflow: visible;
+  }
+
+  .white_shadow {
+    min-width: 400px;
+    font-size: 32px;
   }
 
   .products-img p {
