@@ -5,7 +5,7 @@
   --background-color-gray: #eee;
   --dark-purple: #bd8fe8;
   --light-purple: #f1e0f8;
-  --font-light-color: #a2a2a2;
+  --font-light-color: #878787;
 }
 
 body,
@@ -37,6 +37,11 @@ div {
 button {
   cursor: pointer;
   background: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .a11y-hidden {
@@ -72,9 +77,69 @@ header {
   display: flex;
   flex-direction: column;
   position: relative;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
 /* style ====================== */
+.menu-wrap {
+  position: fixed;
+  padding: 15px 50px;
+  background: var(--background-color-seashell);
+  color: salmon;
+  width: 100%;
+  z-index: 1;
+}
+
+#menu {
+  margin: 0 auto;
+  max-width: 1080px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu img {
+  width: 40px;
+  cursor: pointer;
+}
+
+.menu-link a {
+  position: relative;
+}
+
+.menu-link a::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 0%;
+  left: 50%;
+  bottom: 0;
+  height: 2px;
+  background-color: orangered;
+  transition: all 0.3s ease;
+}
+
+.menu-link a:hover::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: orangered;
+}
+
+.menu-link a:first-child {
+  margin-right: 40px;
+}
+
+.menu-link a:hover {
+  color: orangered;
+}
+
 .section_calendar {
   background: var(--background-color-seashell);
 }
@@ -85,6 +150,22 @@ header {
   gap: 24px;
 }
 
+.btn-add {
+  background: orangered;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  border-bottom: 4px solid rgb(183, 49, 1);
+  transition: ease-out 0.2s;
+}
+
+.btn-add:hover {
+  background: inherit;
+  color: orangered;
+  border: solid #ff4500;
+  border-width: 2px 2px 4px 2px;
+}
+
 .badge {
   position: absolute;
   width: 90px;
@@ -93,18 +174,37 @@ header {
 
 .card-product-img {
   width: 100%;
+  aspect-ratio: 344 / 229;
 }
 
 .cards-description .card-title {
   color: #000;
+  max-width: 200px;
+  min-height: 45px;
+}
+
+.card-title,
+.card-description {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+.card-title {
+  -webkit-line-clamp: 2;
 }
 
 .tags {
   margin-bottom: 20px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
 }
 
 .tags span {
-  margin-right: 5px;
   background: var(--light-purple);
   color: var(--point-color);
   font-size: 12px;
@@ -116,15 +216,18 @@ header {
   color: var(--font-light-color);
   padding: 0;
   font-size: 12px;
+  min-height: 82px;
 }
 
-.card-description::after {
-  content: "";
-  display: block;
-  margin: 32px -24px 32px 0;
-  max-width: 320px;
-  height: 1px;
-  background: #ddd;
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 3px solid #ddd;
+  margin-top: 24px;
+  padding-top: 10px;
+  min-height: 53.5px;
+  font-weight: 700;
 }
 
 .card-more {
@@ -132,8 +235,20 @@ header {
   font-size: 12px;
 }
 
+.recommended-users img {
+  width: 30px;
+  height: 30px;
+  border: 4px solid white;
+  border-radius: 50%;
+}
+
+.recommended-users img:not(:last-child) {
+  margin-right: -20px;
+}
+
 .title-calendar {
   color: salmon;
+  justify-content: space-between;
 }
 
 .section_portfolio {
@@ -191,10 +306,17 @@ header {
 
 .products {
   display: flex;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
 .products:not(:last-child) {
   margin-bottom: 24px;
+}
+
+.products:hover {
+  transform: scale(1.03);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .section_cards .card {
@@ -303,6 +425,10 @@ header {
 }
 
 @media (max-width: 768px) {
+  .menu-link a:first-child {
+    margin-right: 10px;
+  }
+
   header {
     margin-bottom: 80px;
   }
@@ -329,6 +455,17 @@ header {
     font-size: 12px;
     border-radius: 20px;
     overflow: hidden;
+  }
+
+  .products:hover {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  .section_cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .card {

@@ -9,18 +9,28 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
-	<title>Portfolio</title>
+	<title>Digital workplace | DW</title>
 </head>
 
 <body>
-	<section class="section_calendar">
+	<div class="menu-wrap">
+		<nav id="menu">
+			<h1 class="a11y-hidden">Digital Workplace</h1>
+			<img src="img/logo3.png" alt="메인 로고">
+			<div class="menu-link">
+				<a href="#calendar">Calendar</a>
+				<a href="#portfolio">Portfolio</a>
+			</div>
+		</nav>
+	</div>
+	<section id="calendar" class="section_calendar">
 		<div class="wrap">
 			<header class="title-calendar">
-				<h1 class="title white_shadow">
+				<h2 class="title white_shadow">
 					CALENDAR AND
 					<strong>EVENT TOOLS.</strong>
-				</h1>
-				<button type="button">+ Add to Calendar</button>
+				</h2>
+				<button class="btn-add" type="button">+ Add to Calendar</button>
 			</header>
 			<section class="section_cards">
 				<h2 class="a11y-hidden">Products card list</h2>
@@ -33,53 +43,68 @@
 							<span>CSS</span>
 							<span>JavaScript</span>
 						</div>
-						<h3 class="card-title">Digital Workplace Experience</h3>
+						<h3 class="card-title">Digital Workplace Experience
+						</h3>
 						<p class="card-description">It is a long established fact that a reader will be distracted by the readable
 							content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
 							normal distribution of letters.
 						</p>
-						<span class="card-more">SOLD OUT</span>
+						<div class="card-footer">
+							<span class="card-more">SOLD OUT</span>
+						</div>
 					</div>
 				</article>
 				<article class="card products">
-					<img class="card-product-img" src="img/laptop.jpg" alt="책상 위 맥북">
+					<img class="card-product-img" src="img/vr.jpg" alt="책상 위 맥북">
 					<div class="cards-description products-description">
 						<div class="tags">
-							<span>HTML</span>
-							<span>CSS</span>
-							<span>JavaScript</span>
+							<span>AR</span>
+							<span>VR</span>
+							<span>Headsets</span>
 						</div>
-						<h3 class="card-title">Digital Workplace Experience</h3>
-						<p class="card-description">It is a long established fact that a reader will be distracted by the readable
-							content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
-							normal distribution of letters.
+						<h3 class="card-title">Augmented World Expo 2022</h3>
+						<p class="card-description">
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 						</p>
-						<span class="card-more">SOLD OUT</span>
+						<div class="card-footer">
+							<span class="card-more">+ More People</span>
+							<span class="recommended-users">
+								<img src="img/people01.png" alt="추천하는 사용자 사진">
+								<img src="img/people02.png" alt="추천하는 사용자 사진">
+								<img src="img/people03.png" alt="추천하는 사용자 사진">
+							</span>
+						</div>
 					</div>
 				</article>
 				<article class="card products">
-					<img class="card-product-img" src="img/laptop.jpg" alt="책상 위 맥북">
+					<img class="card-product-img" src="img/adobe.jpg" alt="책상 위 맥북">
 					<div class="cards-description products-description">
 						<div class="tags">
-							<span>HTML</span>
-							<span>CSS</span>
-							<span>JavaScript</span>
+							<span>Photoshop</span>
+							<span>Illustrator</span>
 						</div>
-						<h3 class="card-title">Digital Workplace Experience</h3>
-						<p class="card-description">It is a long established fact that a reader will be distracted by the readable
-							content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
-							normal distribution of letters.
+						<h3 class="card-title">Adobe Summit</h3>
+						<p class="card-description">
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.
 						</p>
-						<span class="card-more">SOLD OUT</span>
+						<div class="card-footer">
+							<span class="card-more">+ More People</span>
+							<span class="recommended-users">
+								<img src="img/people04.png" alt="추천하는 사용자 사진">
+								<img src="img/people05.png" alt="추천하는 사용자 사진">
+								<img src="img/people06.png" alt="추천하는 사용자 사진">
+							</span>
+						</div>
 					</div>
 				</article>
 			</section>
 		</div>
 	</section>
-	<section class="section_portfolio">
+	<section id="portfolio" class="section_portfolio">
 		<div class="wrap">
 			<header class="title-portfolio">
-				<h1 class="title orangered_shadow">START YOUR <strong>PORTFOLIO</strong><strong>PROJECT</strong></h1>
+				<h2 class="title orangered_shadow">START YOUR <strong>PORTFOLIO</strong><strong>PROJECT</strong></h2>
 				<p class="subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
 					has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
 					of type and scrambled</p>
