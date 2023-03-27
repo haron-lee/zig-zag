@@ -107,6 +107,7 @@ header {
 
 .menu-link a {
   position: relative;
+  padding: 5px;
 }
 
 .menu-link a::after {
